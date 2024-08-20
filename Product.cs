@@ -18,9 +18,9 @@ namespace productCategory
         public int Id { get; init; }
         public string Name { get; set; } = string.Empty;
         public string? Description { get; set; } = string.Empty;
-       // public Category Category { get; set; }
-      //  public int CategoryId { get; init; }
-      //this is product list
+        // public Category Category { get; set; }
+        // public int CategoryId { get; init; }
+        // This is product list
         private List<ProductDto> _products = new List<ProductDto>();
 
        internal void CreateProduct(Product product)
