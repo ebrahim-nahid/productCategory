@@ -10,7 +10,6 @@ namespace productCategory
 {
     public sealed class Product
     {
-
         private readonly DatabaseHelper _dbHelperPro;
         public Product(DatabaseHelper dbHelperPro)
         {
@@ -21,7 +20,7 @@ namespace productCategory
         public string? Description { get; set; } = string.Empty;
        // public Category Category { get; set; }
       //  public int CategoryId { get; init; }
-
+      //this is product list
         private List<ProductDto> _products = new List<ProductDto>();
 
        internal void CreateProduct(Product product)
@@ -83,7 +82,7 @@ namespace productCategory
             //     }
             }
              public void UpdateProduct(Product product)
-        {
+             {
            // using (SqlConnection connection = new SqlConnection(_dbHelperPro.Connection);
             
                 _dbHelperPro.Connection.Open();
@@ -98,7 +97,7 @@ namespace productCategory
                     command.ExecuteNonQuery();
                 }
             
-        }
+             }
              
 
 
@@ -152,10 +151,6 @@ namespace productCategory
                     {
                         Console.WriteLine("The connection is not open.");
                     }
-
-
-
-
                 }
                 catch (Exception ex)
                 {
